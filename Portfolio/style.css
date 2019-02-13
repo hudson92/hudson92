@@ -1,0 +1,285 @@
+/*Color set:
+#0b0c10
+#1f2833
+#c5c6c7
+#66fcf1
+#45a29e
+*/
+
+/*Top level styles*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+body {
+    color: #a0a0a0;
+}
+
+div {
+   
+}
+h1 {
+    font-family: 'Georgia', serif;
+    color: #66fcf1;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    color: #45a29e;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #0b0c10;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+p {
+    font-family: 'Helvetica', sans-serif;
+    color: #c5c6c7;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Setting up css grid */
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+        'nav nav nav'
+        'hero hero hero'
+        'skills skills skills'
+        'portf portf portf'
+        'about about about'
+        'footer footer footer';
+    height: 100%;
+    
+}
+/*Navigation styles*/
+.nav {
+    grid-area: nav;
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #0b0c10;
+}
+
+.logo {
+    width: 350px;
+    flex: 0 1 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    width: 350px;
+    flex: 0 1 auto;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+}
+
+/*Banner styling*/
+.hero {
+    grid-area: hero;
+    background-image: url(images/Space-clouds-1200.jpg);
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header_overlay {
+    width: 50%;
+    font-size: 2rem;
+    color: #fff;
+    display: block;
+    padding-left: 40px;
+}
+.header_button {
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px #45a293
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #45a293;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.header_button:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+/*Skills section*/
+.skills {
+    grid-area: skills;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    background-color: #0b0c10;
+    padding: 20px 40px;
+}
+
+/*Section styling*/
+.section_headline {
+    width: 100%;
+    justify-content: center;
+    text-align:center;
+    flex: 0 1 auto;
+    margin-bottom: 10px;
+}
+
+.section_card {
+    justify-content: space-around;
+    flex-shrink: 0;
+    border: 4px solid #66fcf1;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    margin: 10px;
+    width: 300px;
+    background-color: #fff;
+}
+
+.section_card img {
+   width: 100%;
+object-fit: contain;
+}
+
+.section_card h3 {
+    text-align: center;
+    padding: 10px
+}
+
+.section_card p {
+    padding: 20px;
+}
+
+/*Portfolio styles*/
+.portfolio {
+    grid-area: portf;
+     display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    background-color: #1f2833;
+    padding: 20px 40px;
+}
+
+.portfolio_card {
+    justify-content: space-around;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    background-image: url(Images/notepad600.jpg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.portfolio_card:hover {
+    opacity: 0.5;
+}
+
+.portfolio_card :hover {
+    cursor: pointer;
+}
+
+.portfolio_card h3 {
+    text-align: center;
+    padding: 10px
+}
+
+.about {
+    grid-area: about;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #1f2833;
+    padding: 20px 40px;
+}
+
+.aboutxt {
+    grid-area: aboutxt;
+    max-width: 550px;
+    
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.contact {
+    grid-area: contact;
+   
+}
+/*Footer styles*/
+.footer {
+    grid-area: footer;
+    display: inline-flex;
+    height: 100px;
+    background-color: #0b0c10;
+    justify-content: space-between;
+    flex-wrap:wrap-reverse;
+    padding: 20px 40px;
+}
+
+.cw {
+    width: 450px;
+    flex: 0 1 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.sw {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.social {
+     width: 150px;
+    flex: 0 1 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+    
+
+span {
+    color: #fff;
+}
+
+
+
+
+
+.portfolio_card p {
+    opacity: 0;
+    padding: 10px;
+    top: 150px;
+    position: relative;
+    color: #fff;
+}
+
+.portfolio_card:hover p {
+    opacity: 1;
+    color: #fff
+}
