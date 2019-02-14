@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="svg1253" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1920px" height="1080px" viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
+<g id="layer1" transform="translate(0,-11.249983)">
+	<g id="g2237" transform="translate(-582.08331,-4808.4668)">
+		
+			<linearGradient id="rect1202_1_" gradientUnits="userSpaceOnUse" x1="1746.0754" y1="5089.5176" x2="2248.7837" y2="5354.1011" gradientTransform="matrix(3.7795 0 0 -3.7795 -6152.7471 25172.2656)">
+			<stop  offset="0" style="stop-color:#F2F2F2"/>
+			<stop  offset="1" style="stop-color:#F2F2F2"/>
+		</linearGradient>
+		<rect id="rect1202" x="582.083" y="4819.719" fill="url(#rect1202_1_)" width="1920" height="1080"/>
+		<g id="g2209">
+			<g id="g1746">
+				<path id="path1615" fill="none" stroke="#5599FF" stroke-width="10.5833" stroke-linecap="round" stroke-linejoin="round" d="
+					M1242.083,5109.717v400.002h600v-400.002H1242.083z"/>
+				<path id="path1617" fill="#5599FF" stroke="#5599FF" stroke-width="10.5833" d="M1542.083,5509.719v100"/>
+				<path id="path1619" fill="#5599FF" stroke="#5599FF" stroke-width="10.5833" stroke-linecap="square" d="M1442.083,5609.719h200
+					"/>
+				<g id="g1635" transform="matrix(0.44216321,0,0,0.44216321,767.3193,4840.4659)">
+					<g id="g1625" transform="matrix(1.3113808,0,0,1.3113808,-64.448415,-158.9384)">
+						
+							<path id="path1621" fill="#393366" stroke="#5599FF" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+							M1150.675,930.47l109.26-87.901"/>
+						
+							<path id="path1623" fill="#393366" stroke="#5599FF" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+							M1150.675,930.47l109.26,87.901"/>
+					</g>
+					<g id="g1631" transform="matrix(-1.3113808,0,0,1.3113808,375.48291,-158.9384)">
+						
+							<path id="path1627" fill="#393366" stroke="#5599FF" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+							M-1284.463,930.47l109.26-87.901"/>
+						
+							<path id="path1629" fill="#393366" stroke="#5599FF" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+							M-1284.463,930.47l109.26,87.901"/>
+					</g>
+					<path id="path1633" fill="#393366" stroke="#5599FF" stroke-width="13.9864" stroke-linecap="round" d="M1704.676,1260.95
+						l95.076-399.375"/>
+				</g>
+				<path id="path1722" fill="#66FCF1" d="M1242.085,5089.719c-11.046-0.002-20.002,8.949-20.004,19.996v400.004
+					c0.002,11.047,8.958,19.998,20.004,19.996h600c11.044-0.002,19.996-8.953,19.998-19.996v-400.004
+					c-0.002-11.043-8.954-19.996-19.998-19.996H1242.085z"/>
+				<path id="path1637" fill="#FFFFFF" d="M1262.083,5129.721h559.998v360h-559.998V5129.721z"/>
+				<path id="path1639" fill="#66FCF1" d="M1522.081,5509.719v100.002h40.002v-100.002H1522.081z"/>
+				<path id="path1641" fill="#66FCF1" d="M1422.085,5589.715v40.004h19.998h199.998h20.004v-40.004h-20.004h-199.998H1422.085z"/>
+				<g id="g1647" transform="matrix(0.57984434,0,0,0.57984434,738.82258,4770.1892)">
+					
+						<path id="path1643" fill="#1F2833" stroke="#1F2833" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+						M1150.675,930.471l109.26-87.901"/>
+					
+						<path id="path1645" fill="#1F2833" stroke="#1F2833" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+						M1150.675,930.471l109.26,87.899"/>
+				</g>
+				<g id="g1653" transform="matrix(-0.57984434,0,0,0.57984434,933.34403,4770.1892)">
+					
+						<path id="path1649" fill="#1F2833" stroke="#1F2833" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+						M-1284.463,930.471l109.26-87.901"/>
+					
+						<path id="path1651" fill="#1F2833" stroke="#1F2833" stroke-width="10.088" stroke-linecap="round" stroke-linejoin="round" d="
+						M-1284.463,930.471l109.26,87.899"/>
+				</g>
+				<path id="path1655" fill="#1F2833" d="M1563.361,5209.579c-5.555-0.105-10.416,3.717-11.627,9.139l-42.039,176.59
+					c-1.621,6.248,2.13,12.627,8.379,14.248c6.248,1.621,12.627-2.131,14.248-8.381c0.039-0.15,0.075-0.305,0.108-0.457
+					l42.04-176.59c1.582-6.258-2.209-12.613-8.468-14.195C1565.138,5209.715,1564.251,5209.594,1563.361,5209.579z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
