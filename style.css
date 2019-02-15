@@ -255,7 +255,7 @@ background-color: #66fcf1;
 }
 
 .portfolio_card:hover {
-    background: #c5c6c7;
+    background: #0b0c10;
 }
 
 .portfolio_card h3 {
@@ -290,7 +290,8 @@ background-color: #66fcf1;
 
 }
 
-.portfolio_card:hover {
+.portfolio_card:hover .port_button{
+    visibility: visible;
    font-size: 1.2rem;
     width: 50%;
     margin:0 25%;
@@ -298,9 +299,14 @@ background-color: #66fcf1;
     padding: 5px;
     border: 2px solid #BA274A;
     color: #BA274A;
+	background: #0b0c10;
 }
 
-
+#button:hover {
+	background: #ba274a;
+	color: #fff;
+	border: 2px solid #fff;
+}
 
 /*About styles*/
 .about {
@@ -309,13 +315,13 @@ background-color: #66fcf1;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #1f2833;
-    padding: 5rem;
+    padding: 0 5rem;
 }
 
 .aboutxt {
     grid-area: aboutxt;
     width: 650px;
-    
+    margin: 2rem auto;
 }
 
 .about h2 {
@@ -329,6 +335,7 @@ background-color: #66fcf1;
     border: 2px solid #fff;
     border-radius: 5px;
     background-color: #fff;
+	margin: 2rem auto;
 }
 /*Footer styles*/
 .footer {
