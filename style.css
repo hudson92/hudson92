@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Georgia', serif;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
     color: #ba274a;
     text-decoration: underline;
     margin-bottom: 10px;
@@ -52,7 +52,7 @@ p {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #ba274a;
 }
 
 /* Setting up css grid */
@@ -81,14 +81,6 @@ a {
     margin-top: 10px;
 }
 
-.logo {
-    width: 350px;
-    flex: 0 1 auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
 .menu {
     width: 100%;
     flex: 0 1 auto;
@@ -111,11 +103,17 @@ a {
 
 .header_overlay {
     width: 50%;
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #fff;
     display: block;
-    padding-left: 40px;
+    padding: 10px;
+    text-align: center;
 }
+
+.head_text span {
+    color: #BA274A;
+}
+
 .header_button {
     font-size: 1.2rem;
     border-radius: 5px;
@@ -127,12 +125,26 @@ a {
     color: #fff;
 }
 
+.head_button {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.head_button span {
+}
+
+.header_button:hover span {
+    color: #BA274A;
+}
+
 .header_button:hover {
     color: #fff;
     background-color: transparent;
     border: 3px solid #BA274A;
     cursor: pointer;
 }
+
+
 
 /*Skills section*/
 .skills {
@@ -169,6 +181,15 @@ a {
     border-radius: 10px;
     border: 3px solid white;
 background-color: #66fcf1;
+}
+
+.section_image {
+    width: 100%;
+}
+
+.section_copy {
+    padding: 20px;
+    text-align: center;
 }
 
 .section_card h3 {
@@ -219,6 +240,54 @@ background-color: #66fcf1;
     visibility: visible;
 }
 
+.portfolio_card p {
+    display: ;
+    padding: 30px;
+    color: #fff;
+    width: 100%;
+    visibility: hidden;
+
+}
+
+.portfolio_card:hover p {
+    visibility: visible;
+    color: #fff
+}
+
+/*Individual portfolio imagery & styles*/
+
+#pro1 {
+     background-image: url(images/notepad600.jpg);
+    background-size: cover;
+}
+
+#pro2 {
+    background-image: url(images/analyticslaptop600.jpg);
+    background-size: cover;
+}
+
+#pro3 {
+    background-image: url(images/skyscapers1200.jpg);
+    background-size: cover;
+}
+
+#pro4 {
+    background-image: url(images/notepad600.jpg);
+    background-size: cover;
+}
+
+#pro5 {
+    background-image: url(images/javascriptimg600.jpg);
+    background-size: cover;
+}
+
+#pro6 {
+    background-image: url(images/analyticslaptop600.jpg);
+    background-size: cover;
+}
+
+
+/*About styles*/
 .about {
     grid-area: about;
     display: flex;
@@ -276,84 +345,9 @@ background-color: #66fcf1;
 }
     
 
-.head_text span {
-    color: #BA274A;
-}
 
 
 
 
-
-.portfolio_card p {
-    display: ;
-    padding: 30px;
-    color: #fff;
-    width: 100%;
-    visibility: hidden;
-
-}
-
-.portfolio_card:hover p {
-    visibility: visible;
-    color: #fff
-}
-
-
-}
-
-.section_image {
-    width: 100%;
-}
-
-.section_copy {
-    padding: 20px;
-    text-align: center;
-}
-
-.head_text {
-
-}
-
-.head_button {
-    margin: 0px auto;
-    text-align: center;
-}
-
-.head_button span {
-}
-
-.header_button:hover span {
-    color: #BA274A;
-}
-
-#pro1 {
-     background-image: url(images/notepad600.jpg);
-    background-size: cover;
-}
-
-#pro2 {
-    background-image: url(images/analyticslaptop600.jpg);
-    background-size: cover;
-}
-
-#pro3 {
-    background-image: url(images/skyscapers1200.jpg);
-    background-size: cover;
-}
-
-#pro4 {
-    background-image: url(images/notepad600.jpg);
-    background-size: cover;
-}
-
-#pro5 {
-    background-image: url(images/javascriptimg600.jpg);
-    background-size: cover;
-}
-
-#pro6 {
-    background-image: url(images/analyticslaptop600.jpg);
-    background-size: cover;
-}
 
 
