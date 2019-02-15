@@ -43,6 +43,7 @@ h2 {
 h3 {
     color: #0b0c10;
     font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-size: 1.5rem;
 }
 
 p {
@@ -52,7 +53,7 @@ p {
 
 a {
     text-decoration: none;
-    color: #ba274a;
+    color: #ba27fa;
 }
 
 /* Setting up css grid */
@@ -79,6 +80,14 @@ a {
     width: 100%;
     z-index: 100;
     margin-top: 10px;
+}
+
+.logo {
+    width: 350px;
+    flex: 0 1 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .menu {
@@ -109,11 +118,6 @@ a {
     padding: 10px;
     text-align: center;
 }
-
-.head_text span {
-    color: #BA274A;
-}
-
 .header_button {
     font-size: 1.2rem;
     border-radius: 5px;
@@ -123,6 +127,17 @@ a {
     padding: 1.5rem;
     background-color: transparent;
     color: #fff;
+}
+
+.header_button:hover {
+    color: #fff;
+    background-color: transparent;
+    border: 3px solid #BA274A;
+    cursor: pointer;
+}
+
+.head_text {
+
 }
 
 .head_button {
@@ -136,15 +151,6 @@ a {
 .header_button:hover span {
     color: #BA274A;
 }
-
-.header_button:hover {
-    color: #fff;
-    background-color: transparent;
-    border: 3px solid #BA274A;
-    cursor: pointer;
-}
-
-
 
 /*Skills section*/
 .skills {
@@ -168,8 +174,6 @@ a {
 .section_card {
     justify-content: space-around;
     flex-shrink: 0;
-    border: 0px solid white;
-    border-radius: 5px;
     flex-wrap: wrap;
     margin: 10px;
     width: 350px;
@@ -177,28 +181,27 @@ a {
     flex-wrap: wrap;
 }
 
+
 .section_card img {
     border-radius: 10px;
     border: 3px solid white;
 background-color: #66fcf1;
 }
 
-.section_image {
-    width: 100%;
-}
-
-.section_copy {
-    padding: 20px;
-    text-align: center;
-}
 
 .section_card h3 {
         color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .section_card p {
 
+}
+
+
+.section_copy {
+    padding: 20px;
+    text-align: center;
 }
 
 /*Portfolio styles*/
@@ -211,27 +214,55 @@ background-color: #66fcf1;
     padding: 5rem;
 }
 
+/*Inidividual project images & styles*/
+
+
+.pro1 {
+    background-image: url(images/notepad600.jpg);
+    background-size: cover;
+}
+
+.pro2 {
+    background-image: url(images/analyticslaptop600.jpg);
+    background-size: cover;
+}
+
+.pro3 {
+    background-image: url(images/skyscapers1200.jpg);
+    background-size: cover;
+}
+
+.pro4 {
+    background-image: url(images/notepad600.jpg);
+    background-size: cover;
+}
+
+.pro5 {
+    background-image: url(images/javascriptimg600.jpg);
+    background-size: cover;
+}
+
+.pro6 {
+    background-image: url(images/analyticslaptop600.jpg);
+    background-size: cover;
+}
+
 .portfolio_card {
     flex-shrink: 0;
     flex-wrap: wrap;
-    width: 350px;
-    height: 300px;
-    cursor: pointer;
+    min-width: 350px;
+    min-height: 300px;
 }
 
 .portfolio_card:hover {
-    opacity: 0.5;
-}
-
-.portfolio_card :hover {
-    cursor: pointer;
+    background: #c5c6c7;
 }
 
 .portfolio_card h3 {
     text-align: center;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 10px;
-   visibility: hidden;
+   visibility:hidden;
         color: #66fcf1;
     width: 100%;
 }
@@ -241,11 +272,11 @@ background-color: #66fcf1;
 }
 
 .portfolio_card p {
-    display: ;
-    padding: 30px;
+    padding: 5px 25px;
     color: #fff;
     width: 100%;
     visibility: hidden;
+    margin-bottom: 1rem;
 
 }
 
@@ -254,37 +285,21 @@ background-color: #66fcf1;
     color: #fff
 }
 
-/*Individual portfolio imagery & styles*/
+.port_button {
+    visibility: hidden;
 
-#pro1 {
-     background-image: url(images/notepad600.jpg);
-    background-size: cover;
 }
 
-#pro2 {
-    background-image: url(images/analyticslaptop600.jpg);
-    background-size: cover;
+.portfolio_card:hover {
+   font-size: 1.2rem;
+    width: 50%;
+    margin:0 25%;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid #BA274A;
+    color: #BA274A;
 }
 
-#pro3 {
-    background-image: url(images/skyscapers1200.jpg);
-    background-size: cover;
-}
-
-#pro4 {
-    background-image: url(images/notepad600.jpg);
-    background-size: cover;
-}
-
-#pro5 {
-    background-image: url(images/javascriptimg600.jpg);
-    background-size: cover;
-}
-
-#pro6 {
-    background-image: url(images/analyticslaptop600.jpg);
-    background-size: cover;
-}
 
 
 /*About styles*/
@@ -294,12 +309,12 @@ background-color: #66fcf1;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #1f2833;
-    padding: 20px 40px;
+    padding: 5rem;
 }
 
 .aboutxt {
     grid-area: aboutxt;
-    max-width: 550px;
+    width: 650px;
     
 }
 
@@ -309,7 +324,11 @@ background-color: #66fcf1;
 
 .contact {
     grid-area: contact;
-   
+  width: 650px;
+    padding: 2rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
 }
 /*Footer styles*/
 .footer {
@@ -344,6 +363,17 @@ background-color: #66fcf1;
     justify-content: center;
 }
     
+
+.head_text span {
+    color: #BA274A;
+}
+
+
+
+
+
+
+
 
 
 
