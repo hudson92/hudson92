@@ -101,7 +101,7 @@ a {
 /*Banner styling*/
 .hero {
     grid-area: hero;
-    background-image: url(images/spacebackground.jpg);
+    background-image: url(Images/spacebackground.jpg);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -213,36 +213,36 @@ background-color: #66fcf1;
     padding: 1rem;
 }
 
-/*Inidividual project images & styles*/
+/*Inidividual project Images & styles*/
 
 
 .pro1 {
-    background-image: url(images/notepad600.jpg);
+    background-image: url(Images/notepad600.jpg);
     background-size: cover;
 }
 
 .pro2 {
-    background-image: url(images/analyticslaptop600.jpg);
+    background-image: url(Images/analyticslaptop600.jpg);
     background-size: cover;
 }
 
 .pro3 {
-    background-image: url(images/skyscapers1200.jpg);
+    background-image: url(Images/skyscapers1200.jpg);
     background-size: cover;
 }
 
 .pro4 {
-    background-image: url(images/notepad600.jpg);
+    background-image: url(Images/notepad600.jpg);
     background-size: cover;
 }
 
 .pro5 {
-    background-image: url(images/javascriptimg600.jpg);
+    background-image: url(Images/javascriptimg600.jpg);
     background-size: cover;
 }
 
 .pro6 {
-    background-image: url(images/analyticslaptop600.jpg);
+    background-image: url(Images/analyticslaptop600.jpg);
     background-size: cover;
 }
 
