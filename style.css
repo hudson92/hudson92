@@ -67,7 +67,6 @@ a {
         'portf portf portf'
         'about about about'
         'footer footer footer';
-    height: 100%;
     
 }
 /*Navigation styles*/
@@ -159,7 +158,7 @@ a {
     flex-wrap:wrap;
     justify-content: space-around;
     background-color: #0b0c10;
-    padding: 5rem;
+    padding: 1rem;
 }
 
 /*Section styling*/
@@ -211,7 +210,7 @@ background-color: #66fcf1;
     flex-wrap:wrap;
     justify-content: center;
     background-color: #1f2833;
-    padding: 5rem;
+    padding: 1rem;
 }
 
 /*Inidividual project images & styles*/
@@ -315,7 +314,7 @@ background-color: #66fcf1;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #1f2833;
-    padding: 0 5rem;
+    padding: 0 1rem;
 }
 
 .aboutxt {
@@ -376,7 +375,23 @@ background-color: #66fcf1;
 }
 
 
+/*large screen styles*/
 
+@media only screen and (min-width 600px) {
+
+	.about {
+		padding: 0 5rem;
+	}
+
+	.portolio {
+		padding: 5rem;
+	}
+
+	.skills {
+		padding: 5rem;
+	}
+
+}
 
 
 
