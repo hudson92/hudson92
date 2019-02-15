@@ -34,9 +34,10 @@ h1 {
 
 h2 {
     font-family: 'Georgia', serif;
-    color: #45a29e;
+    color: #ba274a;
     text-decoration: underline;
     margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 h3 {
@@ -73,9 +74,11 @@ a {
     grid-area: nav;
     display: flex;
     height: 45px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #0b0c10;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    margin-top: 10px;
 }
 
 .logo {
@@ -87,11 +90,12 @@ a {
 }
 
 .menu {
-    width: 350px;
+    width: 100%;
     flex: 0 1 auto;
     align-items: center;
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-right: 50px;
 }
 
 /*Banner styling*/
@@ -101,7 +105,7 @@ a {
     height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;;
     align-items: center;
 }
 
@@ -115,19 +119,18 @@ a {
 .header_button {
     font-size: 1.2rem;
     border-radius: 5px;
-    border: 1px #45a293
+    border: 3px solid #fff;
     text-align: center;
-    margin: 20px;
-    padding: 10px;
-    background-color: #45a293;
-    opacity: 0.8;
+    margin: 2rem;
+    padding: 1.5rem;
+    background-color: transparent;
     color: #fff;
 }
 
 .header_button:hover {
     color: #fff;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 3px solid #BA274A;
     cursor: pointer;
 }
 
@@ -138,7 +141,7 @@ a {
     flex-wrap:wrap;
     justify-content: space-around;
     background-color: #0b0c10;
-    padding: 20px 40px;
+    padding: 5rem;
 }
 
 /*Section styling*/
@@ -147,7 +150,7 @@ a {
     justify-content: center;
     text-align:center;
     flex: 0 1 auto;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
 }
 
 .section_card {
@@ -157,25 +160,24 @@ a {
     border-radius: 5px;
     flex-wrap: wrap;
     margin: 10px;
-    width: 300px;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .section_card img {
-width: 100%;
-object-fit: contain;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 3px solid white;
 background-color: #66fcf1;
 }
 
 .section_card h3 {
-    text-align: center;
-    padding: 10px;
         color: #fff;
+    margin-bottom: 10px;
 }
 
 .section_card p {
-    padding: 20px;
+
 }
 
 /*Portfolio styles*/
@@ -185,17 +187,14 @@ background-color: #66fcf1;
     flex-wrap:wrap;
     justify-content: center;
     background-color: #1f2833;
-    padding: 20px 40px;
+    padding: 5rem;
 }
 
 .portfolio_card {
-    justify-content: space-around;
     flex-shrink: 0;
     flex-wrap: wrap;
-    width: 300px;
+    width: 350px;
     height: 300px;
-    background-image: url(Images/notepad600.jpg);
-    background-size: cover;
     cursor: pointer;
 }
 
@@ -209,7 +208,15 @@ background-color: #66fcf1;
 
 .portfolio_card h3 {
     text-align: center;
-    padding: 10px
+    margin: 2rem auto;
+    padding: 10px;
+   visibility: hidden;
+        color: #66fcf1;
+    width: 100%;
+}
+
+.portfolio_card:hover h3 {
+    visibility: visible;
 }
 
 .about {
@@ -269,8 +276,8 @@ background-color: #66fcf1;
 }
     
 
-span {
-    color: #fff;
+.head_text span {
+    color: #BA274A;
 }
 
 
@@ -278,14 +285,75 @@ span {
 
 
 .portfolio_card p {
-    opacity: 0;
-    padding: 10px;
-    top: 150px;
-    position: relative;
+    display: ;
+    padding: 30px;
     color: #fff;
+    width: 100%;
+    visibility: hidden;
+
 }
 
 .portfolio_card:hover p {
-    opacity: 1;
+    visibility: visible;
     color: #fff
 }
+
+
+}
+
+.section_image {
+    width: 100%;
+}
+
+.section_copy {
+    padding: 20px;
+    text-align: center;
+}
+
+.head_text {
+
+}
+
+.head_button {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.head_button span {
+}
+
+.header_button:hover span {
+    color: #BA274A;
+}
+
+#pro1 {
+     background-image: url(images/notepad600.jpg);
+    background-size: cover;
+}
+
+#pro2 {
+    background-image: url(images/analyticslaptop600.jpg);
+    background-size: cover;
+}
+
+#pro3 {
+    background-image: url(images/skyscapers1200.jpg);
+    background-size: cover;
+}
+
+#pro4 {
+    background-image: url(images/notepad600.jpg);
+    background-size: cover;
+}
+
+#pro5 {
+    background-image: url(images/javascriptimg600.jpg);
+    background-size: cover;
+}
+
+#pro6 {
+    background-image: url(images/analyticslaptop600.jpg);
+    background-size: cover;
+}
+
+
