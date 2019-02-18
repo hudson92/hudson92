@@ -59,15 +59,16 @@ a {
 /* Setting up css grid */
 .wrapper {
     display: grid;
-    width: 100%;
+    max-width: 100%;
     grid-template-areas: 
-        'nav nav nav'
-        'hero hero hero'
-        'skills skills skills'
-        'portf portf portf'
-        'about about about'
-        'footer footer footer';
-    
+        'nav'
+        'hero'
+        'skills'
+        'portf'
+        'about'
+        'footer';
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
 }
 /*Navigation styles*/
 .nav {
@@ -81,13 +82,6 @@ a {
     margin-top: 10px;
 }
 
-.logo {
-    width: 350px;
-    flex: 0 1 auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
 
 .menu {
     width: 100%;
@@ -377,6 +371,25 @@ background-color: #66fcf1;
 /*large screen styles*/
 
 @media only screen and (min-width 600px) {
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        'nav nav nav'
+        'hero hero hero'
+        'skills skills skills'
+        'portf portf portf'
+        'about about about'
+        'footer footer footer';
+  grid-template-columns: auto;
+    grid-template-rows: auto;
+    }
+
+    .hero {
+    height: 100vh;
+        width: 100vw;
+}
+
 
 	.about {
 		padding: 0 5rem;
