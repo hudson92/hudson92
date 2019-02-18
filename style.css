@@ -17,7 +17,7 @@
 
 html {
     scroll-behavior: smooth;
-
+    font-size: 12px;
 }
 
 body {
@@ -30,6 +30,7 @@ div {
 h1 {
     font-family: 'Georgia', serif;
     color: #66fcf1;
+    font-size: 2.3rem;
 }
 
 h2 {
@@ -103,15 +104,14 @@ a {
 }
 
 .header_overlay {
-    width: 50%;
-    font-size: 1.2rem;
+    width: 70%;
     color: #fff;
     display: block;
     padding: 10px;
     text-align: center;
 }
 .header_button {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-radius: 5px;
     border: 3px solid #fff;
     text-align: center;
@@ -331,12 +331,16 @@ background-color: #66fcf1;
 
 .contact {
     grid-area: contact;
-  width: 650px;
+  width: 70%;
     padding: 2rem;
     border: 2px solid #fff;
     border-radius: 5px;
     background-color: #fff;
 	margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 /*Footer styles*/
 .footer {
@@ -374,6 +378,76 @@ background-color: #66fcf1;
 
 .head_text span {
     color: #BA274A;
+}
+
+/*Form styling*/
+form {
+  /* Just to center the form on the page */
+  margin: 2rem auto;
+  width: 100%;
+  /* To see the outline of the form */
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1rem;
+}
+
+label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+    color: #000;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+input, textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1.5rem;
+
+  /* To give the same size to all text fields */
+  width: 70%;
+  box-sizing: border-box;
+
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #000;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+
+textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* To give enough room to type some text */
+  height: 5rem;
+}
+
+form .button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px; /* same size as the label elements */
+}
+
+form button {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: 1rem;
+    padding: 5px;
+    border: 1px solid #BA274A;
+    border-radius: 5px;
+}
+
+form button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background: #ba274a;
+        cursor: pointer;
 }
 
 
