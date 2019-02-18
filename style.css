@@ -211,39 +211,46 @@ background-color: #66fcf1;
 
 .pro1 {
     background-image: url(Images/notepad600.jpg);
-    background-size: cover;
+   background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pro2 {
     background-image: url(Images/analyticslaptop600.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pro3 {
     background-image: url(Images/skyscapers1200.jpg);
-    background-size: cover;
+  background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pro4 {
     background-image: url(Images/notepad600.jpg);
-    background-size: cover;
+   background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pro5 {
     background-image: url(Images/javascriptimg600.jpg);
-    background-size: cover;
+   background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .pro6 {
     background-image: url(Images/analyticslaptop600.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .portfolio_card {
     flex-shrink: 0;
     flex-wrap: wrap;
-    min-width: 350px;
-    min-height: 300px;
+    width: 250px;
+    height: 200px;
+    overflow: scroll;
 }
 
 .portfolio_card:hover {
@@ -252,11 +259,12 @@ background-color: #66fcf1;
 
 .portfolio_card h3 {
     text-align: center;
-    margin: 1rem auto;
+    margin: 0.2rem auto;
     padding: 10px;
    visibility:hidden;
         color: #66fcf1;
     width: 100%;
+    font-size: 1rem;
 }
 
 .portfolio_card:hover h3 {
@@ -268,7 +276,8 @@ background-color: #66fcf1;
     color: #fff;
     width: 100%;
     visibility: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
 
 }
 
@@ -284,7 +293,7 @@ background-color: #66fcf1;
 
 .portfolio_card:hover .port_button{
     visibility: visible;
-   font-size: 1.2rem;
+   font-size: 0.8rem;
     width: 50%;
     margin:0 25%;
     cursor: pointer;
@@ -370,7 +379,7 @@ background-color: #66fcf1;
 
 /*large screen styles*/
 
-@media only screen and (min-width 600px) {
+@media only screen and (min-width: 600px) {
 .wrapper {
     display: grid;
     width: 100%;
@@ -403,6 +412,30 @@ background-color: #66fcf1;
 		padding: 5rem;
 	}
 
+    .portfolio_card {
+    width: 450px;
+    height: 300px;
+    overflow: scroll;
+}
+
+    .portfolio_card h3 {
+    margin: 0.75rem auto;
+    font-size: 1.3rem;
+}
+
+
+.portfolio_card p {
+    margin-bottom: 1.2rem;
+    font-size: 0.8rem;
+
+}
+
+
+.portfolio_card:hover .port_button{
+   font-size: 1rem;
+
+
+}
 }
 
 
