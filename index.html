@@ -11,11 +11,42 @@
     </head>
     <body>
         <div class="wrapper">
-            <nav class="nav">
-                <div class="menu">
-                    <img src="/Images/hamburgermenu.svg" width="32px" height="32px" />
-                </div>
-            </nav> <!-- End of nav -->
+
+
+            <nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#more"><li>Skills</li></a>
+      <a href="#Portfolio"><li>Portfolio</li></a>
+      <a href="#About"><li>About</li></a>
+      <a href="#Contact"><li>Contact</li></a>
+    </ul>
+  </div>
+</nav>
+
+
+
+            <!-- End of nav -->
             <header class="hero">
                 <div class="header_overlay">
                     <div class="head_text">
@@ -76,7 +107,7 @@
                        </div>
             </section> <!-- End of skills -->
             <!-- Start of portfolio -->
-            <section class="portfolio">
+            <section class="portfolio" id="Portfolio">
                 <div class="section_headline">
                     <h2>Projects</h2>
                 </div>
@@ -118,13 +149,13 @@
                 </div>
             </section> <!-- End of portfolio -->
             <section class="about">
-                <div class="aboutxt">
+                <div class="aboutxt" id="About">
                     <h2>About me</h2>
                          <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
 
                 </div>
 
-                <div class="contact">
+                <div class="contact" id="Contact">
                     <h2>Contact</h2>
                     <form action="send_form_email.php" name="contactForm" method="post">
   <div>
