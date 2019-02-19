@@ -18,6 +18,10 @@
 html {
     scroll-behavior: smooth;
     font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
 }
 
 body {
@@ -28,28 +32,25 @@ div {
    
 }
 h1 {
-    font-family: 'Georgia', serif;
     color: #66fcf1;
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 h2 {
-    font-family: 'Roboto', 'Helvetica', sans-serif;
     color: #ba274a;
     text-decoration: underline;
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h3 {
     color: #0b0c10;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
     font-size: 1.5rem;
 }
 
 p {
-    font-family: 'Helvetica', sans-serif;
     color: #c5c6c7;
+    font-size: 1rem;
 }
 
 a {
@@ -61,8 +62,7 @@ a {
 .wrapper {
     display: grid;
     max-width: 100%;
-    grid-template-areas: 
-        'nav'
+    grid-template-areas:
         'hero'
         'skills'
         'portf'
@@ -72,12 +72,7 @@ a {
     grid-template-rows: auto;
 }
 /*Navigation styles*/
-.nav {
-    grid-area: nav;
-    width: 100%;
-    z-index: 100;
-    margin-top: 10px;
-}
+
 
 #menuToggle
 {
@@ -119,7 +114,7 @@ a {
   margin-bottom: 5px;
   position: relative;
 
-  background: #45a29e;
+  background: #fff;
   border-radius: 3px;
 
   z-index: 1;
@@ -175,13 +170,13 @@ a {
  */
 #menu
 {
-  position: absolute;
+  visibility: hidden;
+    position: absolute;
   width: 300px;
-  margin-top: -80px;
+  margin-top: -75px;
     margin-left: -50px;
   padding: 50px;
   padding-top: 125px;
-
   background: #0b0c10;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
@@ -190,7 +185,7 @@ a {
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
 
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 
@@ -212,6 +207,7 @@ a {
 #menuToggle input:checked ~ ul
 {
   transform: none;
+    visibility: visible;
 }
 
 /*Banner styling*/
@@ -240,6 +236,18 @@ a {
     padding: 1.5rem;
     background-color: transparent;
     color: #fff;
+    transform: translate(0%, 600%);
+    opacity: 0;
+    animation: rise;
+    animation-delay: 0.3s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rise {
+    from {transform: translate(0%, 600%); opacity: 0;}
+    to {transform: translate(0%, 0%); opacity: 1;}
 }
 
 .header_button:hover {
@@ -249,8 +257,42 @@ a {
     cursor: pointer;
 }
 
-.head_text {
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: ; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
 
+@keyframes typing {
+    from {width: 0}
+    to {width: 100%}
+}
+
+@keyframes blink-caret {
+    from, to {border-color: transparent}
+    50% {border-color: #fff}
+}
+
+.head_text span {
+ color: #ba274a;
+}
+
+
+.flash {
+    color: #BA274A;
+    opacity: 0;
+    animation-name: flash;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+}
+@keyframes flash {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .head_button {
@@ -258,8 +300,6 @@ a {
     text-align: center;
 }
 
-.head_button span {
-}
 
 .header_button:hover span {
     color: #BA274A;
@@ -272,7 +312,7 @@ a {
     flex-wrap:wrap;
     justify-content: space-around;
     background-color: #0b0c10;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /*Section styling*/
@@ -324,7 +364,7 @@ background-color: #66fcf1;
     flex-wrap:wrap;
     justify-content: center;
     background-color: #1f2833;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /*Inidividual project Images & styles*/
@@ -369,8 +409,8 @@ background-color: #66fcf1;
 .portfolio_card {
     flex-shrink: 0;
     flex-wrap: wrap;
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
     overflow: scroll;
 }
 
@@ -385,7 +425,6 @@ background-color: #66fcf1;
    visibility:hidden;
         color: #66fcf1;
     width: 100%;
-    font-size: 1rem;
 }
 
 .portfolio_card:hover h3 {
@@ -398,7 +437,6 @@ background-color: #66fcf1;
     width: 100%;
     visibility: hidden;
     margin-bottom: 0.5rem;
-    font-size: 0.7rem;
 
 }
 
@@ -414,7 +452,7 @@ background-color: #66fcf1;
 
 .portfolio_card:hover .port_button{
     visibility: visible;
-   font-size: 0.8rem;
+   font-size: 1rem;
     width: 50%;
     margin:0 25%;
     cursor: pointer;
@@ -497,9 +535,7 @@ background-color: #66fcf1;
 }
     
 
-.head_text span {
-    color: #BA274A;
-}
+
 
 /*Form styling*/
 form {
@@ -575,6 +611,23 @@ form button:hover {
 /*large screen styles*/
 
 @media only screen and (min-width: 600px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
 .wrapper {
     display: grid;
     width: 100%;
@@ -615,19 +668,17 @@ form button:hover {
 
     .portfolio_card h3 {
     margin: 0.75rem auto;
-    font-size: 1.3rem;
 }
 
 
 .portfolio_card p {
     margin-bottom: 1.2rem;
-    font-size: 0.8rem;
 
 }
 
 
 .portfolio_card:hover .port_button{
-   font-size: 1rem;
+   font-size: 1.2rem;
 
 
 }
