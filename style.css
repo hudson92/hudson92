@@ -72,7 +72,7 @@ a {
     grid-template-rows: auto;
 }
 /*Navigation styles*/
-.navigation {
+.nav {
     grid-area: nav;
     width: 100%;
     z-index: 100;
