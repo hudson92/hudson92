@@ -170,7 +170,12 @@ a {
  */
 #menu
 {
-  visibility: hidden;
+ animation-name: visible;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /*This animation is to prevent it's initial appearance before moving off to the side*/
     position: absolute;
   width: 300px;
   margin-top: -75px;
@@ -183,11 +188,16 @@ a {
   /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(-200%, 0);
 
   transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    
 }
 
+@keyframes visible {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 #menu li
 {
@@ -257,26 +267,6 @@ a {
     cursor: pointer;
 }
 
-.typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: ; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-    from {width: 0}
-    to {width: 100%}
-}
-
-@keyframes blink-caret {
-    from, to {border-color: transparent}
-    50% {border-color: #fff}
-}
 
 .head_text span {
  color: #ba274a;
@@ -301,8 +291,9 @@ a {
 }
 
 
-.header_button:hover span {
+.header_button span {
     color: #BA274A;
+    font-weight: bold;
 }
 
 /*Skills section*/
@@ -336,9 +327,10 @@ a {
 
 
 .section_card img {
-    border-radius: 10px;
+    width: 64px;
+ /*   border-radius: 10px;
     border: 3px solid white;
-background-color: #66fcf1;
+background-color: #66fcf1;*/
 }
 
 
@@ -628,6 +620,11 @@ form button:hover {
         font-size: 1.2rem;
     }
 
+    .header_button, .header_button span {
+    font-size: 1.7rem;   
+ 
+}
+    
 .wrapper {
     display: grid;
     width: 100%;
