@@ -190,7 +190,7 @@ a {
   transform-origin: 0% 0%;
   transform: translate(-200%, 0);
 
-  transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     
 }
 
@@ -407,7 +407,16 @@ background-color: #66fcf1;*/
 }
 
 .portfolio_card:hover {
+    opacity: 0;
     background: #0b0c10;
+     animation-name: reveal;
+    animation-duration: 1s;
+    animation-direction: forward;
+}
+
+@keyframes reveal {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .portfolio_card h3 {
@@ -681,9 +690,15 @@ form button:hover {
 
 .portfolio_card:hover .port_button{
    font-size: 1.2rem;
-
-
 }
+
+    .about {
+        padding: 0 2rem;
+    }
+.aboutxt, .contact {
+        width: 45%;
+    }
+
 }
 
 
