@@ -505,27 +505,32 @@ background-color: #66fcf1;*/
 }
 
 .cw {
-    width: 450px;
+    margin: 0 1rem;
     flex: 0 1 auto;
     align-items: center;
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 0.8rem;
 }
+.cw p {
+    font-size: 0.9rem;
+}
+
 .sw {
     display: inline-flex;
     flex-wrap: wrap;
 }
 
 .social {
-     width: 150px;
     flex: 0 1 auto;
+    margin: 0 1rem;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
-    
+.social img {
+    width: 3rem;
+}
 
 
 
