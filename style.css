@@ -26,6 +26,10 @@ html {
 
 body {
     color: #a0a0a0;
+    font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
 }
 
 div {
@@ -178,6 +182,7 @@ a {
     /*This animation is to prevent it's initial appearance before moving off to the side*/
     position: absolute;
   width: 300px;
+    height:100vh;
   margin-top: -75px;
     margin-left: -50px;
   padding: 50px;
@@ -363,13 +368,13 @@ background-color: #66fcf1;*/
 
 
 .pro1 {
-    background-image: url(Images/notepad600.jpg);
+    background-image: url(Images/portfolio/Triathlon%20home%20thumb.png);
    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .pro2 {
-    background-image: url(Images/analyticslaptop600.jpg);
+    background-image: url(Images/portfolio/Presque-Vu-Home-thumb.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -407,11 +412,12 @@ background-color: #66fcf1;*/
 }
 
 .portfolio_card:hover {
-    opacity: 0;
+    opacity: 1;
     background: #0b0c10;
      animation-name: reveal;
     animation-duration: 1s;
-    animation-direction: forward;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
 }
 
 @keyframes reveal {
@@ -491,11 +497,9 @@ background-color: #66fcf1;*/
 
 .contact {
     grid-area: contact;
-  width: 70%;
-    padding: 2rem;
-    border: 2px solid #fff;
+    padding:0 2rem;
     border-radius: 5px;
-    background-color: #fff;
+    background-color:;
 	margin: 2rem auto;
     display: flex;
     justify-content: center;
@@ -546,7 +550,7 @@ background-color: #66fcf1;*/
 /*Form styling*/
 form {
   /* Just to center the form on the page */
-  margin: 2rem auto;
+  margin: 0rem auto;
   width: 100%;
   /* To see the outline of the form */
   border-radius: 1em;
@@ -559,19 +563,22 @@ form div + div {
 label {
   /* To make sure that all labels have the same size and are properly aligned */
   display: inline-block;
-  width: 100px;
-  text-align: center;
-    color: #000;
+  width: 100%;
+  text-align: left;
+    color: #fff;
     font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin-bottom: 1rem;
 }
 
 input, textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
-  font: 1.5rem;
+  font: 1rem;
+    height: 2rem;
+    padding: 1rem;
 
   /* To give the same size to all text fields */
-  width: 70%;
+  width: 100%;
   box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
@@ -600,8 +607,8 @@ form .button {
 form button {
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
-  margin-left: 1rem;
-    padding: 5px;
+  margin-left:-90px;
+    padding: 1rem;
     border: 1px solid #BA274A;
     border-radius: 5px;
 }
