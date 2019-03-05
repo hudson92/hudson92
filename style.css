@@ -407,7 +407,7 @@ background-color: #66fcf1;*/
     flex-shrink: 0;
     flex-wrap: wrap;
     width: 300px;
-    height: 250px;
+    max-height: 250px;
     overflow: scroll;
 }
 
