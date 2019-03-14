@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
-    /*----------------------------------------------------------------------
-    DON'T THINK I CAN'T SEE WHAT YOU'RE DOING
-    ------------------------------------------------------------------------*/
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -124,6 +122,13 @@
                 <div class="section_headline">
                     <h2>Projects</h2>
                 </div>
+                <div class="portfolio_card pro0">
+
+                    <h3>Newsworks microsite</h3>
+                    <p>While working in house I project managed the development and content creation behind a new microsite for Newsworks, the trade marketing body for UK newsbrands.<br><br>This included on going SEO and paid search activity to drive visibility of the content.</p>
+					<button class="port_button" id="button" onclick="window.open('http://planning.newsworks.org.uk')">Visit site</button>
+                </div>
+
                 <div class="portfolio_card pro1">
 
                     <h3>Hudson Triathlon</h3>
@@ -133,7 +138,7 @@
                    <div class="portfolio_card pro2">
 
                    <h3>Presque Vu</h3>
-                                        <p>Portfolio site built for a new theatre group in London. The simple wordpress development was designed to be easily editible by the admins, with a focus on using imagery to promote their projects. <br>SEO was a core part of the build and content generation to ensure maximum exposure.</p>
+                                        <p>Portfolio site built for a new theatre group in London. The simple wordpress development was designed to be easily editible by the admins, with a focus on using imagery to promote their projects. <br><br>SEO was a core part of the build and content generation to ensure maximum exposure.</p>
                     <button class="port_button" id="button" onclick="window.open('https://www.presquevu.co.uk')">Visit site</button>
                 </div>
                
@@ -151,22 +156,23 @@
 
                 <div class="contact" id="Contact">
                     <h2>Contact</h2>
-                    <form action="send_form_email.php" name="contactForm" method="post">
+                    <form action="index.php" name="contactForm" method="POST">
   <div>
     <label for="name">Name:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="name">
   </div>
   <div>
     <label for="mail">E-mail:</label>
-    <input type="email" id="mail" name="user_mail">
+    <input type="email" id="mail" name="mail">
   </div>
   <div>
     <label for="msg">Message:</label>
-    <textarea id="msg" name="user_message">Add any additional message here...</textarea>
+    <textarea id="msg" name="message">Add any additional message here...</textarea>
   </div>
                         <div class="button">
   <button type="submit">Send your message</button>
 </div>
+
 </form>
                 </div>
             </section> <! -- End of about -->
