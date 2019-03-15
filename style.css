@@ -164,9 +164,7 @@ a {
  * Ohyeah and the last one should go the other direction
  */
 #menuToggle input:checked ~ span:nth-last-child(2)
-                        <div class="button">
-  <button type="submit">Send your message</button>
-</div>
+
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
@@ -476,6 +474,7 @@ a {
     grid-area: aboutxt;
     width: 650px;
     margin: 2rem auto;
+    padding: 0 3rem;
 }
 
 .about h2 {
@@ -484,15 +483,38 @@ a {
 
 .contact {
     grid-area: contact;
-    padding:0 2rem;
+    padding:0 3rem;
     border-radius: 5px;
     background-color:;
 	margin: 2rem auto;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
 }
+
+.contact h2 {
+    width: 100%;
+}
+
+.sw {
+    display: flex;
+    width: 50%;
+    margin: 1rem auto;
+    justify-content: space-around;
+}
+
+.social {
+    margin: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social img {
+    width: 3rem;
+}
+
+
 /*Footer styles*/
 .footer {
     grid-area: footer;
@@ -505,104 +527,18 @@ a {
 }
 
 .cw {
-    margin: 0 1rem;
+    padding: 2rem;
     flex: 0 1 auto;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     text-align: center;
 }
 .cw p {
     font-size: 0.9rem;
 }
 
-.sw {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-
-.social {
-    flex: 0 1 auto;
-    margin: 0 1rem;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-}
-.social img {
-    width: 3rem;
-}
 
 
-
-/*Form styling*/
-form {
-  /* Just to center the form on the page */
-  margin: 0rem auto;
-  width: 100%;
-  /* To see the outline of the form */
-  border-radius: 1em;
-}
-
-form div + div {
-  margin-top: 1rem;
-}
-
-label {
-  /* To make sure that all labels have the same size and are properly aligned */
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-    color: #fff;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
-    margin-bottom: 1rem;
-}
-
-input, textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1rem;
-    height: 2rem;
-    padding: 1rem;
-
-  /* To give the same size to all text fields */
-  width: 100%;
-  box-sizing: border-box;
-
-  /* To harmonize the look & feel of text field border */
-  border: 1px solid #000;
-    border-radius: 5px;
-}
-
-input:focus, textarea:focus {
-  /* To give a little highlight on active elements */
-  border-color: #000;
-}
-
-textarea {
-  /* To properly align multiline text fields with their labels */
-  vertical-align: top;
-
-  /* To give enough room to type some text */
-  height: 5rem;
-}
-
-
-form button {
-  /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-  margin: 1rem auto;
-    padding: 1rem;
-    width: 35%;
-    border: 1px solid #BA274A;
-    border-radius: 5px;
-}
-
-form button:hover {
-    color: #fff;
-    border: 1px solid #fff;
-    background: #ba274a;
-        cursor: pointer;
-}
 
 
 /*large screen styles*/
