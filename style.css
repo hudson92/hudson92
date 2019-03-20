@@ -372,18 +372,21 @@ a {
     background-image: url(Images/portfolio/Triathlon%20home%20thumb.png);
    background-size: cover;
     background-repeat: no-repeat;
+    height: 300px;
 }
 
 .pro2 {
     background-image: url(Images/portfolio/Presque-Vu-Home-thumb.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+        height: 300px;
 }
 
 .pro0 {
     background-image: url(Images/portfolio/Planning-Hub.jpg);
   background-size: cover;
     background-repeat: no-repeat;
+        height: 300px;
 }
 
 }
@@ -392,7 +395,7 @@ a {
     flex-shrink: 0;
     flex-wrap: wrap;
     width: 300px;
-    max-height: 250px;
+    height: 450px;
     overflow: scroll;
 }
 
@@ -446,7 +449,7 @@ a {
     visibility: visible;
    font-size: 1rem;
     width: 50%;
-    margin:0 25%;
+    margin:0% 25%;
     cursor: pointer;
     padding: 5px;
     border: 2px solid #BA274A;
@@ -543,7 +546,7 @@ a {
 
 /*large screen styles*/
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 650px) {
 
     h1 {
         font-size: 3rem;
@@ -600,8 +603,8 @@ a {
 
     .portfolio_card {
     width: 450px;
-    height: 300px;
     overflow: scroll;
+        margin: 0;
 }
 
     .portfolio_card h3 {
