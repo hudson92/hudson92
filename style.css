@@ -17,38 +17,44 @@
 
 html {
     scroll-behavior: smooth;
-
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
 }
 
 body {
     color: #a0a0a0;
+    font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
 }
 
 div {
    
 }
 h1 {
-    font-family: 'Georgia', serif;
     color: #66fcf1;
+    font-size: 2rem;
 }
 
 h2 {
-    font-family: 'Roboto', 'Helvetica', sans-serif;
     color: #ba274a;
     text-decoration: underline;
     margin-bottom: 10px;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 h3 {
     color: #0b0c10;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
     font-size: 1.5rem;
 }
 
 p {
-    font-family: 'Helvetica', sans-serif;
     color: #c5c6c7;
+    font-size: 1rem;
 }
 
 a {
@@ -59,49 +65,172 @@ a {
 /* Setting up css grid */
 .wrapper {
     display: grid;
-    width: 100%;
-    grid-template-areas: 
-        'nav nav nav'
-        'hero hero hero'
-        'skills skills skills'
-        'portf portf portf'
-        'about about about'
-        'footer footer footer';
-    
+    max-width: 100%;
+    grid-template-areas:
+        'hero'
+        'skills'
+        'portf'
+        'about'
+        'footer';
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
 }
 /*Navigation styles*/
-.nav {
-    grid-area: nav;
-    display: flex;
-    height: 45px;
-    background-color: transparent;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    margin-top: 10px;
-}
 
-.logo {
-    width: 350px;
-    flex: 0 1 auto;
-    align-items: center;
-    display: flex;
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
     justify-content: center;
+  top: 50px;
+  left: 30px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-.menu {
-    width: 100%;
-    flex: 0 1 auto;
-    align-items: center;
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 50px;
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -8px;
+  left: -7px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #fff;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #45a29e;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+ animation-name: visible;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /*This animation is to prevent it's initial appearance before moving off to the side*/
+    position: absolute;
+  width: 300px;
+    height:100vh;
+  margin-top: -75px;
+    margin-left: -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #0b0c10;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-200%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    
+}
+
+@keyframes visible {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#menu li
+{
+  padding: 5px 0;
+  font-size: 2rem;
+    color: #fff;
+}
+
+#menu li:hover {
+    color: #45a29e;
+    text-decoration: underline;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+    visibility: visible;
 }
 
 /*Banner styling*/
 .hero {
     grid-area: hero;
     background-image: url(Images/spacebackground.jpg);
+    background-position: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;;
@@ -109,15 +238,14 @@ a {
 }
 
 .header_overlay {
-    width: 50%;
-    font-size: 1.2rem;
+    width: 70%;
     color: #fff;
     display: block;
     padding: 10px;
     text-align: center;
 }
 .header_button {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border-radius: 5px;
     border: 3px solid #fff;
     text-align: center;
@@ -125,6 +253,18 @@ a {
     padding: 1.5rem;
     background-color: transparent;
     color: #fff;
+    transform: translate(0%, 600%);
+    opacity: 0;
+    animation: rise;
+    animation-delay: 0.3s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rise {
+    from {transform: translate(0%, 600%); opacity: 0;}
+    to {transform: translate(0%, 0%); opacity: 1;}
 }
 
 .header_button:hover {
@@ -134,8 +274,22 @@ a {
     cursor: pointer;
 }
 
-.head_text {
 
+.head_text span {
+ color: #ba274a;
+}
+
+
+.flash {
+    color: #BA274A;
+    opacity: 0;
+    animation-name: flash;
+    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+}
+@keyframes flash {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .head_button {
@@ -143,11 +297,10 @@ a {
     text-align: center;
 }
 
-.head_button span {
-}
 
-.header_button:hover span {
+.header_button span {
     color: #BA274A;
+    font-weight: bold;
 }
 
 /*Skills section*/
@@ -157,7 +310,7 @@ a {
     flex-wrap:wrap;
     justify-content: space-around;
     background-color: #0b0c10;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /*Section styling*/
@@ -173,17 +326,17 @@ a {
     justify-content: space-around;
     flex-shrink: 0;
     flex-wrap: wrap;
-    margin: 10px;
+    margin: 1rem;
     width: 350px;
+    height: 250px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 
 .section_card img {
-    border-radius: 10px;
-    border: 3px solid white;
-background-color: #66fcf1;
+    width: 64px;
 }
 
 
@@ -209,56 +362,60 @@ background-color: #66fcf1;
     flex-wrap:wrap;
     justify-content: center;
     background-color: #1f2833;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 /*Inidividual project Images & styles*/
 
 
 .pro1 {
-    background-image: url(Images/notepad600.jpg);
-    background-size: cover;
+    background-image: url(Images/portfolio/Triathlon%20home%20thumb.png);
+   background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
 }
 
 .pro2 {
-    background-image: url(Images/analyticslaptop600.jpg);
+    background-image: url(Images/portfolio/Presque-Vu-Home-thumb.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+        height: 300px;
 }
 
-.pro3 {
-    background-image: url(Images/skyscapers1200.jpg);
-    background-size: cover;
+.pro0 {
+    background-image: url(Images/portfolio/Planning-Hub.jpg);
+  background-size: cover;
+    background-repeat: no-repeat;
+        height: 300px;
 }
 
-.pro4 {
-    background-image: url(Images/notepad600.jpg);
-    background-size: cover;
-}
-
-.pro5 {
-    background-image: url(Images/javascriptimg600.jpg);
-    background-size: cover;
-}
-
-.pro6 {
-    background-image: url(Images/analyticslaptop600.jpg);
-    background-size: cover;
 }
 
 .portfolio_card {
     flex-shrink: 0;
     flex-wrap: wrap;
-    min-width: 350px;
-    min-height: 300px;
+    width: 300px;
+    height: 450px;
+    overflow: scroll;
 }
 
 .portfolio_card:hover {
+    opacity: 1;
     background: #0b0c10;
+     animation-name: reveal;
+    animation-duration: 1s;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes reveal {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .portfolio_card h3 {
     text-align: center;
-    margin: 1rem auto;
+    margin: 0.2rem auto;
     padding: 10px;
    visibility:hidden;
         color: #66fcf1;
@@ -274,7 +431,7 @@ background-color: #66fcf1;
     color: #fff;
     width: 100%;
     visibility: hidden;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
 }
 
@@ -290,9 +447,9 @@ background-color: #66fcf1;
 
 .portfolio_card:hover .port_button{
     visibility: visible;
-   font-size: 1.2rem;
+   font-size: 1rem;
     width: 50%;
-    margin:0 25%;
+    margin:0% 25%;
     cursor: pointer;
     padding: 5px;
     border: 2px solid #BA274A;
@@ -320,6 +477,7 @@ background-color: #66fcf1;
     grid-area: aboutxt;
     width: 650px;
     margin: 2rem auto;
+    padding: 0 3rem;
 }
 
 .about h2 {
@@ -328,13 +486,38 @@ background-color: #66fcf1;
 
 .contact {
     grid-area: contact;
-  width: 650px;
-    padding: 2rem;
-    border: 2px solid #fff;
+    padding:0 3rem;
     border-radius: 5px;
-    background-color: #fff;
+    background-color:;
 	margin: 2rem auto;
+    display: inline-block;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
+
+.contact h2 {
+    width: 100%;
+}
+
+.sw {
+    display: flex;
+    width: 50%;
+    margin: 1rem auto;
+    justify-content: space-around;
+}
+
+.social {
+    margin: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social img {
+    width: 3rem;
+}
+
+
 /*Footer styles*/
 .footer {
     grid-area: footer;
@@ -347,36 +530,64 @@ background-color: #66fcf1;
 }
 
 .cw {
-    width: 450px;
+    padding: 2rem;
     flex: 0 1 auto;
     align-items: center;
-    display: flex;
-    justify-content: center;
+    width: 100%;
     text-align: center;
-    font-size: 0.8rem;
 }
-.sw {
-    display: inline-flex;
-    flex-wrap: wrap;
+.cw p {
+    font-size: 0.9rem;
 }
 
-.social {
-     width: 150px;
-    flex: 0 1 auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-    
 
-.head_text span {
-    color: #BA274A;
-}
+
 
 
 /*large screen styles*/
 
-@media only screen and (min-width 600px) {
+@media only screen and (min-width: 650px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .header_button, .header_button span {
+    font-size: 1.7rem;   
+ 
+}
+    
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        'nav nav nav'
+        'hero hero hero'
+        'skills skills skills'
+        'portf portf portf'
+        'about about about'
+        'footer footer footer';
+  grid-template-columns: auto;
+    grid-template-rows: auto;
+    }
+
+    .hero {
+    height: 100vh;
+        width: 100vw;
+}
+
 
 	.about {
 		padding: 0 5rem;
@@ -389,6 +600,34 @@ background-color: #66fcf1;
 	.skills {
 		padding: 5rem;
 	}
+
+    .portfolio_card {
+    width: 450px;
+    overflow: scroll;
+        margin: 0;
+}
+
+    .portfolio_card h3 {
+    margin: 0.75rem auto;
+}
+
+
+.portfolio_card p {
+    margin-bottom: 1.2rem;
+
+}
+
+
+.portfolio_card:hover .port_button{
+   font-size: 1.2rem;
+}
+
+    .about {
+        padding: 0 2rem;
+    }
+.aboutxt, .contact {
+        width: 45%;
+    }
 
 }
 

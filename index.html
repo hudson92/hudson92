@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sam's mock portfolio</title>
-        <meta name="description" content="A draft version of this portfolio page">
-        <meta name="robots" content="noindex">
+      <title>Toe the design - Freelance web development and digital marketing</title>
+        <meta name="description" content="London based front end web developer and digital marketer. Specialising in Wordpress developements, SEO/SEM, strategy and email marketing. I love bringing projects to life through my various skills and working closely with clients to achieve their digital goals.">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="animations.css">
+        <link rel="shortcut icon" href="Images/icons/TD-Favicon.png" type="image/x-icon">
     </head>
     <body>
         <div class="wrapper">
-            <nav class="nav">
-                <div class="menu">
-                    <img src="/Images/hamburgermenu.svg" width="32px" height="32px" />
-                </div>
-            </nav> <!-- End of nav -->
+
+
+            <nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#more"><li>Skills</li></a>
+      <a href="#Portfolio"><li>Portfolio</li></a>
+      <a href="#About"><li>About</li></a>
+      <a href="#Contact"><li>Contact</li></a>
+    </ul>
+  </div>
+</nav>
+
+
+
+            <!-- End of nav -->
             <header class="hero">
                 <div class="header_overlay">
                     <div class="head_text">
-                <h1>Hello, I'm Sam Hudson<span>.</span><br>Digital marketer and front-end developer<span>.</span></h1>
+                        <h1><span>&lt;h1&gt;</span>Hello, I'm Sam Hudson<span>&lt;/h1&gt;</span></h1>
+                        <h1>Digital marketer and front-end developer.</h1>
                     </div>
                     <div class="head_button">
-                        <a href="#more"><button class="header_button">Find out more <span>&#x2913;</span></button></a>
+                        <a href="#more"><button class="header_button">Find out more <span class="flash">&#x2913;</span></button></a>
                     </div>
                 </div>
             </header> <!-- End of header -->
@@ -30,113 +64,110 @@
                 <div class="section_headline">
                     <h2>Core skills</h2>
                 </div>
-                <div class="section_card">
-                    <div class="section_image">
-                    <img src="Images/icons/gui-3614763.svg" />
-                    </div>
-                    <div class="section_copy">
-                    <h3>SEO &amp; SEM</h3>
-                         <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
-                  <br>
-                        <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
-                    </div>
-                    </div>
+
                    <div class="section_card">
                        <div class="section_image">
-                    <img src="/Images/icons/code-3600810.svg" />
+                    <img src="Images/icons/Coding100.png" />
                        </div>
                        <div class="section_copy">
-                    <h3>Front End Development</h3>
-                         <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
-                  <br>
-                        <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
+                    <h3>Front end development</h3>
+                         <p>Experience building on the latest front end technologies and techniques to deliver clean, simple sites for your users.</p>
                      </div>
+                       </div>
+                <div class="section_card">
+                       <div class="section_image">
+                    <img src="Images/icons/Responsive.png" />
+                       </div>
+                       <div class="section_copy">
+                    <h3>Mobile first design</h3>
+                       <p>In a world that is moving further away from desktop it is essential that your site looks the best on any resolution. The best way to do this is always to start  from the smallest screen size and work up.</p>
+
+                    </div>
                        </div>
                  <div class="section_card">
                        <div class="section_image">
-                    <img src="/Images/icons/code-3600810.svg" />
+                    <img src="Images/icons/WP100.png" />
                        </div>
                        <div class="section_copy">
-                    <h3>Wordpress Development</h3>
-                        <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
-                  <br>
-                        <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
+                    <h3>Wordpress development</h3>
+                        <p>As the most popular open source CMS in the world Wordpress offers great flexibility and growth to fulfil the needs of any site. While also allowing users great control once the initial development is complete. </p>
                     </div>
                        </div>
+
+                <div class="section_card">
+                    <div class="section_image">
+                    <img src="Images/icons/SEO100.png" />
+                    </div>
+                    <div class="section_copy">
+                    <h3>Search</h3>
+                         <p>What's the use of a great looking site if your audience can't find you?</p>
+                  <br>
+                        <p>Search engine marketing forms a core part of any development from the get go to ensure that you reach the right audience in the best ways.</p>
+                    </div>
+                    </div>
                    <div class="section_card">
                        <div class="section_image">
-                    <img src="Images/icons/gui-2311261.svg" />
+                    <img src="Images/icons/Analytics.png" />
                        </div>
                        <div class="section_copy">
-                    <h3>Strategy &amp; Analytics</h3>
-                       <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
+                    <h3>Strategy &amp; analytics</h3>
+                       <p>Understanding your users before, during and after any development is key to delivering a long lasting and effective site.</p>
                   <br>
-                        <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
+                        <p>Through rigorous research and analysis we can take the guessing away from any project plan and development.</p>
                     </div>
                        </div>
             </section> <!-- End of skills -->
             <!-- Start of portfolio -->
-            <section class="portfolio">
+            <section class="portfolio" id="Portfolio">
                 <div class="section_headline">
                     <h2>Projects</h2>
                 </div>
+                <div class="portfolio_card pro0">
+
+                    <h3>Newsworks microsite</h3>
+                    <p>While working in house I project managed the development and content creation behind a new microsite for Newsworks, the trade marketing body for UK newsbrands.<br><br>This included on going SEO and paid search activity to drive visibility of the content.</p>
+					<button class="port_button" id="button" onclick="window.open('http://planning.newsworks.org.uk')">Visit site</button>
+                </div>
+
                 <div class="portfolio_card pro1">
 
-                    <h3>Project 1</h3>
-                    <p>Lorem ipsum delor ibus matr. Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.</p>
-					<button class="port_button" id="button">Read more</button>
+                    <h3>Hudson Triathlon</h3>
+                    <p>Simple, responsive custom built worpdress site to promote my triathlon career through blogs, results and visuals. Also a platform for promoting the brands that provide support for my sporting career, and engaging with supporters.</p>
+					<button class="port_button" id="button" onclick="window.open('https://triathlon.toethedesign.com')">Visit site</button>
                 </div>
                    <div class="portfolio_card pro2">
 
-                   <h3>Project 2</h3>
-                                        <p>Lorem ipsum delor ibus matr. Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.</p>
-                    <button class="port_button" id="button">Read more</button>
+                   <h3>Presque Vu</h3>
+                                        <p>Portfolio site built for a new theatre group in London. The simple wordpress development was designed to be easily editible by the admins, with a focus on using imagery to promote their projects. <br><br>SEO was a core part of the build and content generation to ensure maximum exposure.</p>
+                    <button class="port_button" id="button" onclick="window.open('https://www.presquevu.co.uk')">Visit site</button>
                 </div>
-                   <div class="portfolio_card pro3">
-
-                    <h3>Project 3</h3>
-                                        <p>Lorem ipsum delor ibus matr. Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.</p>
-<button class="port_button" id="button">Read more</button>
-                </div>
-                  <div class="portfolio_card pro4">
-
-                    <h3>Project 4</h3>
-                    <p>Lorem ipsum delor ibus matr. Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.</p>
-               <button class="port_button" id="button">Read more</button>
-                </div>
-                   <div class="portfolio_card pro5">
-
-                    <h3>Project 5</h3>
-                    <p>Lorem ipsum delor ibus matr. Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.</p>
-               <button class="port_button" id="button">Read more</button>
-                </div>
-                   <div class="portfolio_card pro6">
-
-                   <h3>Project 6</h3>
-                    <p>Lorem ipsum delor ibus matr. Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.<br>Lorem ipsum delor ibus matr.Lorem ipsum delor ibus matr.</p>
-               <button class="port_button" id="button">Read more</button>
-                </div>
+               
             </section> <!-- End of portfolio -->
             <section class="about">
-                <div class="aboutxt">
+                <div class="aboutxt" id="About">
                     <h2>About me</h2>
-                         <p>Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus. Lorum ipsum delar loribus.</p>
+                         <p>A web developer, digital marketer, and triathlete walk into a bar...
+                    </p><br>
+                    <p>That's not the start of a great joke but sums up my career so far. Starting out in digital marketing, I quickly took an interest in the more technical side of the job and particularly web design and development. All the while I have been pursuing a pretty strong career in amateur triathlon, including competing at World an European championships.</p> <br>
+                    <p>Toe the Design comes from a common phrase to toe the line at the start of a race. I like to push my competitive edge into everything I do in my work and I believe it gives me that passionate edge when I become truly invested in projects. </p><br>
+                    <p>If you want to know more, or maybe just become friends then get in touch.</p>
 
                 </div>
 
                 <div class="contact">
-                    <h2>Contact</h2>
-                    <form>Insert form here...</form>
+                    <h2>Get in touch</h2>
+                    <p>If you would like to get in touch about any projects, or just to chat, then you can reach out using the channels below.</p>
+                      <div class="sw">
+                           <div class="social" onclick="window.open('mailto:samhudson1992@gmail.com')"><img src="Images/icons/closed-envelope-circle.png" /></div>
+
+                 <div class="social" onclick="window.open('https://www.linkedin.com/in/sam-hudson-8103958b/')"><img src="Images/icons/linkedin.png" /></div>
+                 <div class="social" onclick="window.open('https://www.instagram.com/triman_sam/')"><img src="Images/icons/instagram.png" /></div>
+                </div>
                 </div>
             </section> <! -- End of about -->
              <!-- End of about -->
             <footer class="footer">
-                <div class="cw"><p>Copywright 2019</p></div>
-                <div class="sw">
-                <div class="social">Logo 1</div>
-                 <div class="social">Logo 2</div>
-                 <div class="social">Logo 3</div>
-                </div>
+                <div class="cw">&copy; Toe the Design 2019 </div>
             </footer> <!-- End of footer -->
         </div>
     </body>
