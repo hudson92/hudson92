@@ -18,7 +18,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 12px;
+    font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont,
     “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
     “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
@@ -63,19 +63,7 @@ a {
     color: #ba27fa;
 }
 
-/* Setting up css grid */
-.wrapper {
-    display: grid;
-    max-width: 100%;
-    grid-template-areas:
-        'hero'
-        'skills'
-        'portf'
-        'about'
-        'footer';
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-}
+
 /*Navigation styles*/
 
 
@@ -229,31 +217,29 @@ a {
 
 /*Banner styling*/
 .hero {
-    grid-area: hero;
-    background-image: url(Images/spacebackground.jpg);
-    background-position: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;;
-    align-items: center;
+    position: relative;
+    display:block;
+    margin-bottom: -4px !important;;
 }
 
 .header_overlay {
-    width: 70%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
-    display: block;
-    padding: 10px;
     text-align: center;
 }
 .header_button {
     font-size: 1.4rem;
     border-radius: 5px;
-    border: 3px solid #fff;
+    border: 3px solid #ba274a;
     text-align: center;
-    margin: 2rem;
+    margin: 4rem;
     padding: 1.5rem;
     background-color: transparent;
     color: #fff;
+    background-color: #ba274a;
     transform: translate(0%, 600%);
     opacity: 0;
     animation: rise;
@@ -270,8 +256,7 @@ a {
 
 .header_button:hover {
     color: #fff;
-    background-color: transparent;
-    border: 3px solid #BA274A;
+    border: 3px solid #fff;
     cursor: pointer;
 }
 
@@ -282,7 +267,7 @@ a {
 
 
 .flash {
-    color: #BA274A;
+    color: #fff;
     opacity: 0;
     animation-name: flash;
     animation-iteration-count: infinite;
@@ -300,16 +285,12 @@ a {
 
 
 .header_button span {
-    color: #BA274A;
+    color: #fff;
     font-weight: bold;
 }
 
 /*Skills section*/
 .skills {
-    grid-area: skills;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
     background-color: #0b0c10;
     padding: 2rem;
 }
@@ -317,38 +298,41 @@ a {
 /*Section styling*/
 .section_headline {
     width: 100%;
-    justify-content: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     text-align:center;
-    flex: 0 1 auto;
     margin-bottom: 2rem;
 }
 
 .section_card {
-    justify-content: space-around;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    margin: 1rem;
-    width: 350px;
-    height: 250px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    vertical-align: top;
+    padding: 2rem;
+    width: 33rem;
+    height: 20rem;
+    background-color: #3c2c30;
+    border: 2px solid #fff;
+     position: relative;
+    margin: 2rem auto;
 }
 
 
-.section_card img {
-    width: 64px;
+.section_image {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 
+.section_image img {
+    width: 4rem;
+}
 
 .section_card h3 {
         color: #fff;
     margin-bottom: 15px;
 }
 
-.section_card p {
-
-}
 
 
 .section_copy {
@@ -358,46 +342,17 @@ a {
 
 /*Portfolio styles*/
 .portfolio {
-    grid-area: portf;
-     display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
     background-color: #1f2833;
     padding: 2rem;
 }
 
 /*Inidividual project Images & styles*/
-
-
-.pro1 {
-    background-image: url(Images/portfolio/Triathlon%20home%20thumb.png);
-   background-size: cover;
-    background-repeat: no-repeat;
-    height: 300px;
-}
-
-.pro2 {
-    background-image: url(Images/portfolio/Presque-Vu-Home-thumb.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-        height: 300px;
-}
-
-.pro0 {
-    background-image: url(Images/portfolio/Planning-Hub.jpg);
-  background-size: cover;
-    background-repeat: no-repeat;
-        height: 300px;
-}
-
-}
-
 .portfolio_card {
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    width: 300px;
-    height: 450px;
     overflow: scroll;
+    vertical-align: top;
+    width: 33rem;
+    position: relative;
+    margin: 2rem auto;
 }
 
 .portfolio_card:hover {
@@ -443,6 +398,8 @@ a {
 
 .port_button {
     visibility: hidden;
+    vertical-align: bottom;
+  
 
 }
 
@@ -450,12 +407,16 @@ a {
     visibility: visible;
    font-size: 1rem;
     width: 50%;
-    margin:0% 25%;
+  position: relative;
+    left: 8rem;
+    top: 2rem;
     cursor: pointer;
     padding: 5px;
     border: 2px solid #BA274A;
     color: #BA274A;
 	background: #0b0c10;
+    vertical-align: bottom;
+    
 }
 
 #button:hover {
@@ -464,21 +425,42 @@ a {
 	border: 2px solid #fff;
 }
 
+
+
+.pro1 {
+    background-image: url(Images/portfolio/Triathlon%20home%20thumb.png);
+   background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.pro2 {
+    background-image: url(Images/portfolio/Presque-Vu-Home-thumb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+        height: 300px;
+}
+
+.pro0 {
+    background-image: url(Images/portfolio/Planning-Hub.jpg);
+  background-size: cover;
+    background-repeat: no-repeat;
+        height: 300px;
+}
+
+
+
+
 /*About styles*/
 .about {
-    grid-area: about;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #1f2833;
-    padding: 0 1rem;
+width: 100%;
+    background-color: #0b0c10;
+    padding: 2rem 5rem;
 }
 
 .aboutxt {
-    grid-area: aboutxt;
-    width: 650px;
-    margin: 2rem auto;
-    padding: 0 3rem;
+margin-bottom: 3rem;
+    font-size: 1rem;
 }
 
 .about h2 {
@@ -486,67 +468,38 @@ a {
 }
 
 .contact {
-    grid-area: contact;
-    padding:0 3rem;
-    border-radius: 5px;
-    background-color:;
-	margin: 2rem auto;
-    display: inline-block;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+margin-bottom: 3rem;
+    font-size: 1rem;
 }
 
-.contact h2 {
-    width: 100%;
-}
 
 .sw {
-    display: flex;
-    width: 50%;
-    margin: 1rem auto;
-    justify-content: space-around;
+    text-align: center;
 }
 
 .social {
-    margin: 1rem;
-    align-items: center;
-    cursor: pointer;
+display: inline-block;
+margin: 2rem 3rem;
+
 }
 
 .social img {
-    width: 3rem;
+width: 4rem;
 }
 
 
 /*Footer styles*/
 .footer {
-    grid-area: footer;
-    display: inline-flex;
-    height: 100px;
+width: 100%;
     background-color: #0b0c10;
-    justify-content: space-between;
-    flex-wrap:wrap-reverse;
-    padding: 20px 40px;
-}
-
-.cw {
-    padding: 2rem;
-    flex: 0 1 auto;
-    align-items: center;
-    width: 100%;
     text-align: center;
-}
-.cw p {
-    font-size: 0.9rem;
+    height: 2rem;
 }
 
 
 
 
-
-/*large screen styles*/
-
+/*tablet screen styles
 @media only screen and (min-width: 650px) {
 
     h1 {
@@ -570,19 +523,6 @@ a {
  
 }
     
-.wrapper {
-    display: grid;
-    width: 100%;
-    grid-template-areas:
-        'nav nav nav'
-        'hero hero hero'
-        'skills skills skills'
-        'portf portf portf'
-        'about about about'
-        'footer footer footer';
-  grid-template-columns: auto;
-    grid-template-rows: auto;
-    }
 
     .hero {
     height: 100vh;
@@ -631,6 +571,93 @@ a {
     }
 
 }
+
+
+
+
+*/
+
+
+/*large screen styles
+
+@media only screen and (min-width: 800px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .header_button, .header_button span {
+    font-size: 1.7rem;   
+ 
+}
+    
+
+    .hero {
+    height: 100vh;
+        width: 100vw;
+}
+
+
+	.about {
+		padding: 0 5rem;
+	}
+
+	.portolio {
+		padding: 5rem;
+	}
+
+	.skills {
+		padding: 5rem;
+	}
+
+    .portfolio_card {
+    width: 450px;
+    overflow: scroll;
+        margin: 0;
+}
+
+    .portfolio_card h3 {
+    margin: 0.75rem auto;
+}
+
+
+.portfolio_card p {
+    margin-bottom: 1.2rem;
+
+}
+
+
+.portfolio_card:hover .port_button{
+   font-size: 1.2rem;
+}
+
+    .about {
+        padding: 0 2rem;
+    }
+.aboutxt, .contact {
+        width: 45%;
+    }
+
+}
+
+*/
+
+
+
+
+
 
 
 
