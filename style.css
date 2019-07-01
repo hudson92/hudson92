@@ -453,7 +453,12 @@ a {
         height: 300px;
 }
 
-
+.pro3 {
+    background-image: url(Images/portfolio/Ozone-project.png);
+  background-size: cover;
+    background-repeat: no-repeat;
+        height: 300px;
+}
 
 
 /*About styles*/
