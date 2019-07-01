@@ -509,7 +509,7 @@ width: 100%;
 
 
 /*tablet screen styles*/
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 700px) {
 
     h1 {
         font-size: 2.5rem;
@@ -529,7 +529,7 @@ width: 100%;
 
     .header_button, .header_button span {
     font-size: 1.4rem;   
- 
+    
 }
     
     .banner {
@@ -567,14 +567,14 @@ display: inline-block;
 .about {
 width: 100%;
     background-color: #0b0c10;
-    padding: 2rem 8rem;
+    padding: 2rem 2rem;
     display: inline-block;
 }
 
 .aboutxt {
 margin-bottom: 3rem;
     font-size: 1rem;
-    padding: 0rem 5rem;
+    padding: 0rem 4rem;
     width: 50%;
     float:left;
 }
@@ -586,9 +586,9 @@ margin-bottom: 3rem;
 .contact {
 margin-bottom: 3rem;
     font-size: 1rem;
-    padding: 0rem 5rem;
+    padding: 0rem 4rem;
     width: 50%;
-    float: right;
+    float: left;
 }
 
 
@@ -605,9 +605,10 @@ margin: 1rem 1.5rem;
 .social img {
 width: 3rem;
 }
+}
+    
 
-
-
+     
 /*large screen styles
 
 @media only screen and (min-width: 800px) {
